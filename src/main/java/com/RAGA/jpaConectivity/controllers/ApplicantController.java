@@ -14,12 +14,12 @@ public class ApplicantController {
     @Autowired
     private ApplicantService applicantService;
 
-    @GetMapping
+    @GetMapping("/get")
     public List<Applicant> getAllApplicants(){
         return applicantService.getAllApplicants();
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public Applicant saveApplicant(@RequestBody Applicant applicant){
         return applicantService.saveApplicantCurd(applicant);
     }
